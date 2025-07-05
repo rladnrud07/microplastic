@@ -161,16 +161,16 @@
 
   <!-- 첫 화면 -->
   <div class="container active" id="home" role="main" aria-label="첫 화면">
-    <h1 class="main-title">🧪 일상 속 미세 플라스틱 탐색기</h1>
-    <p class="sub-title">무심코 쓰는 제품 속, 미세 플라스틱의 위험을 알아보세요.</p>
+    <h1 class="main-title"> 일상 속 미세 플라스틱 탐색기</h1>
+    <p class="sub-title">무심코 쓰는 제품 속 미세 플라스틱의 위험을 알아보세요.</p>
     <div class="card-container">
       <article class="card" tabindex="0" role="button" aria-pressed="false" onclick="goTo('info')" onkeydown="if(event.key==='Enter'){goTo('info')}">
-        <div class="icon" aria-hidden="true">🔬</div>
+        <div class="icon" aria-hidden="true">1</div>
         <h3>유해성 알아보기</h3>
-        <p>호흡기, 세포, 호르몬 등 인체에 미치는 영향을 확인해요.</p>
+        <p>호흡기, 세포, 호르몬 등 인체에 미치는 영향을 확인하기. </p>
       </article>
       <article class="card" tabindex="0" role="button" aria-pressed="false" onclick="goTo('search')" onkeydown="if(event.key==='Enter'){goTo('search')}">
-        <div class="icon" aria-hidden="true">🔍</div>
+        <div class="icon" aria-hidden="true">2</div>
         <h3>위험도 검색기</h3>
         <p>물품을 입력하면 미세플라스틱 위험도를 알려드려요.</p>
       </article>
@@ -178,7 +178,7 @@
   </div>
   <!-- 유해성 설명 화면 -->
   <div class="container" id="info" role="region" aria-label="유해성 설명">
-    <h1>미세플라스틱의 유해성 (키워드 클릭)</h1>
+    <h1> 미세 플라스틱의 유해성 알아보기 - (키워드 클릭) </h1>
     <div id="hazardButtons" role="list">
       <button role="listitem" onclick="showInfo('respiratory')" aria-describedby="hazardDetail">호흡기 손상</button>
       <button role="listitem" onclick="showInfo('cytotoxic')" aria-describedby="hazardDetail">세포 독성</button>
@@ -194,11 +194,11 @@
   </div>
   <!-- 검색기 화면 -->
   <div class="container" id="search" role="region" aria-label="위험도 검색기">
-    <h1>미세플라스틱 위험도 검색기</h1>
+    <h1>미세 플라스틱 위험도 검색기</h1>
     <input
       type="text"
       id="searchInput"
-      placeholder="예: 생수, 화장품, 컵라면 등"
+      placeholder="예: 생수, 샴푸, 컵라면, 생리대 등"
       aria-label="검색어 입력"
     />
     <button onclick="searchRisk()" aria-label="검색 실행">검색</button>
@@ -237,15 +237,15 @@
       },
       hormone: {
         title: "호르몬 교란",
-        desc: '미세플라스틱 및 그 구성 성분에 포함된 환경호르몬(예: 비스페놀 A, 프탈레이트)은 내분비계에 중대한 교란을 일으킵니다. 이 물질들은 인체 내 호르몬 수용체에 결합하여 정상적인 호르몬 신호 전달을 방해하고, 생식기능 저하, 성장장애, 대사 장애, 신경 발달 이상 등을 유발할 수 있습니다. 특히 태아 및 어린이의 경우 발달 과정에서 매우 민감하여 장기적 건강 문제로 이어질 우려가 큽니다.'
+        desc: '미세플라스틱 및 그 구성 성분에 포함된 환경호르몬(예: 비스페놀 A, 프탈레이트)은 내분비계에 교란을 일으킵니다. 이 물질들은 인체 내 호르몬 수용체에 결합하여 정상적인 호르몬 신호 전달을 방해하고 생식기능 저하, 성장장애, 대사 장애, 신경 발달 이상 등을 유발할 수 있습니다. 특히 태아 및 어린이의 경우 발달 과정에서 매우 민감하여 장기적 건강 문제로 이어질 우려가 큽니다.'
       },
       organ: {
         title: "장기 침투",
-        desc: '최신 연구에 따르면 미세플라스틱은 혈액 순환계를 통해 폐, 간, 심장, 신장 등 주요 장기에 침투할 수 있으며, 심지어 태반을 통과하여 태아에게도 영향을 미칠 수 있습니다. 체내에 축적된 미세플라스틱은 조직 내 염증 반응을 촉진하고 세포 기능을 저하시켜 면역 체계의 불균형과 만성 염증 상태를 초래할 수 있습니다. 이러한 상태는 각종 만성 질환과 관련이 있으며, 장기적으로 인체 건강에 심각한 위협이 될 수 있습니다.'
+        desc: '최신 연구에 따르면 미세플라스틱은 혈액 순환계를 통해 폐, 간, 심장, 신장 등 주요 장기에 침투할 수 있으며 심지어 태반을 통과하여 태아에게도 영향을 미칠 수 있습니다. 체내에 축적된 미세플라스틱은 조직 내 염증 반응을 촉진하고 세포 기능을 저하시켜 면역 체계의 불균형과 만성 염증 상태를 초래할 수 있습니다. 이러한 상태는 각종 만성 질환과 관련이 있으며 장기적으로 인체 건강에 심각한 위협이 될 수 있습니다.'
       },
       cancer: {
         title: "발암 가능성",
-        desc: '미세플라스틱은 다양한 독성 화학물질과 중금속을 흡착할 수 있으며, 체내에 축적되면서 산화 스트레스와 DNA 손상을 유발해 돌연변이 발생 위험을 높입니다. 만성적인 염증 상태는 종양 형성에 기여할 수 있으며, 특히 간암, 폐암, 대장암 등 주요 장기에서 암 발생률 증가와 연관이 있다는 연구 결과가 있습니다. 아직 초기 단계의 연구가 많지만, 장기 노출에 따른 발암 위험성에 대한 경계가 필요합니다.'
+        desc: '미세플라스틱은 다양한 독성 화학물질과 중금속을 흡착할 수 있으며 체내에 축적되면서 산화 스트레스와 DNA 손상을 유발해 돌연변이 발생 위험을 높일 수 있습니다. 만성적인 염증 상태는 종양 형성에 기여할 수 있으며 특히 간암, 폐암, 대장암 등 주요 장기에서 암 발생률 증가와 연관이 있다는 연구 결과가 있습니다. 아직 초기 단계의 연구가 많지만 장기 노출에 따른 발암 위험성에 대한 경계가 필요합니다.'
       }
     };
     function showInfo(key) {
@@ -259,65 +259,65 @@
       detail.scrollIntoView({ behavior: "smooth" });
     }
     const data = {
-      "생수병": {
-        level: "중간",
-        desc: "장시간 PET 병 보관으로 인한 미세플라스틱 용출 가능성 있음",
+      "생수": {
+        level: "5",
+        desc: "장시간 페트병 보관으로 인해 미세 플라스틱이 용출되었을 수 있음",
         tip: "친환경 용기 사용 또는 직사광선 피하기"
       },
       "인공눈물": {
-        level: "높음",
-        desc: "플라스틱 용기에서 인공눈물이 나오는 과정에서 미세 플라스틱 검출 확률 높음",
+        level: "3",
+        desc: "플라스틱 용기에서 인공눈물이 나오는 과정에서 미세 플라스틱이 묻어 나올 수 있음",
         tip: "처음 3~4방울 떨어트린 후 사용"
       },
       "화장품": {
-        level: "높음",
+        level: "5",
         desc: "스크럽 성분에 미세 플라스틱이 포함되어 있을 수 있음",
         tip: "성분표 확인 및 polyethylene 피하기"
       },
       "컵라면": {
-        level: "높음",
-        desc: "뜨거운 물 접촉 시 용기 내 용출 가능성 있음",
+        level: "5",
+        desc: "뜨거운 물 접촉 시 용기 내에서 미세 플라스틱이 용출될 수 있음",
         tip: "냄비 조리 후 그릇에 담아 섭취하기"
       },
       "빨대": {
-        level: "낮음",
-        desc: "입을 통한 직접 노출 가능성 있음",
+        level: "3",
+        desc: "입을 통해 직접 노출될 수 있음",
         tip: "스테인리스 빨대 사용"
       },
       "생리대": {
-        level: "높음",
-        desc: "고분자 플라스틱 흡수체와 겉면 부직포로 구성, 미세플라스틱 검출 가능성 높음",
+        level: "5",
+        desc: "고분자 플라스틱 흡수체와 겉면 부직포로 구성되어 있어 미세 플라스틱이 나올 수 있음",
         tip: "면 생리대나 친환경 인증 제품 사용하기"
       },
       "종이컵": {
-        level: "낮음",
-        desc: "안쪽 코팅된 플라스틱이 미세하게 벗겨질 수 있음",
+        level: "1",
+        desc: "안쪽에 코팅된 플라스틱이 미세하게 벗겨질 수 있음",
         tip: "머그컵이나 텀블러 사용 생활화하기"
       },
       "도시락 용기": {
-        level: "중간",
-        desc: "전자레인지 사용 시 미세플라스틱 용출 가능성 있음",
+        level: "3",
+        desc: "전자레인지 사용 시 미세플라스틱이 용출될 수 있음",
         tip: "도자기나 유리용기를 사용하거나 뚜껑은 제거하고 데우기"
       },
-      "플라스틱 숟가락": {
-        level: "중간",
-        desc: "뜨거운 음식과 접촉 시 미세한 분리 가능성 있음",
-        tip: "금속 식기를 사용하거나 재사용 가능한 숟가락 준비하기"
-      },
       "라면 뚜껑": {
-        level: "중간",
-        desc: "뜨거운 물과 접촉하며 스티로폼이나 PP 용기에서 용출 가능성 있음",
+        level: "3",
+        desc: "뜨거운 물과 접촉하며 스티로폼이나 PP용기에서 용출될 수 있음",
         tip: "냄비 조리 후 그릇에 옮겨 담아 먹는 습관 가지기"
       },
       "샴푸": {
-        level: "중간",
-        desc: "세정력 강화 성분에 미세플라스틱 포함 가능성 있음",
+        level: "3",
+        desc: "세정력 강화 성분에 미세플라스틱이 포함되어 있을 수 있음",
         tip: "무실리콘, 천연성분 중심의 제품 선택하기"
       },
       "세제 캡슐": {
-        level: "중간",
-        desc: "PVA 캡슐이 수용성이라지만 미세 입자 잔존 우려 가능성 있음",
-        tip: "일반 액체세제 정량 사용하거나 친환경 인증 세제 선택하기"
+        level: "3",
+        desc: "PVA 캡슐이 수용성이라지만 미세한 입자가 남아있을 수 있음",
+        tip: "일반 액체세제 사용하기"
+      },
+      "해산물" : {
+        level: "3",
+        desc: "해수를 통해 미세 플라스틱을 섭취했을 수 있음",
+        tip: "깨끗한 물로 꼼꼼히 세척한 후 섭취하기"
       }
     };
     function searchRisk() {
@@ -332,8 +332,9 @@
         resultBox.style.display = "block";
         let className = "risk-low";
         let icon = "🔵";
-        if (result.level === "중간") { className = "risk-medium"; icon = "🟠"; }
-        if (result.level === "높음") { className = "risk-high"; icon = "🔴"; }
+        if (result.level === "1") { classname = "risk-low"; icon = "🔵"; }
+        if (result.level === "3") { className = "risk-medium"; icon = "🟠"; }
+        if (result.level === "5") { className = "risk-high"; icon = "🔴"; }
         riskLevel.innerHTML = `위험도: <span class="${className}">${icon} ${result.level}</span>`;
         riskInfo.innerText = result.desc;
         tipBox.innerHTML = `<strong>줄이는 방법:</strong> ${result.tip}`;
